@@ -1,13 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import DashboardLayout from "@/components/layouts/DashboardLayout";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <DashboardLayout>
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl font-semibold text-gray-900">Dashboard</h1>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+            <h3 className="text-lg font-medium text-gray-900">Conversas Ativas</h3>
+            <p className="mt-2 text-3xl font-semibold text-whatsapp-dark">0</p>
+          </div>
+          
+          <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+            <h3 className="text-lg font-medium text-gray-900">Mensagens Hoje</h3>
+            <p className="mt-2 text-3xl font-semibold text-whatsapp-dark">0</p>
+          </div>
+          
+          <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+            <h3 className="text-lg font-medium text-gray-900">Taxa de Resposta</h3>
+            <p className="mt-2 text-3xl font-semibold text-whatsapp-dark">0%</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 
